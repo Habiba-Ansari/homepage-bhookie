@@ -316,6 +316,8 @@
     text-align: center;
     margin-top: 80px;
     color: white;
+    padding-left: 350px; 
+    
   }
   
   .about-title {
@@ -334,7 +336,7 @@
   
   
 /* About Detail Section */
-.about-detail {
+  .about-detail {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -343,26 +345,44 @@
     max-width: 1200px;
     padding: 0 50px;
     color: white;
-    flex-wrap: wrap; /* make responsive */
+    flex-wrap: wrap; /* For responsiveness */
   }
+
   
-  .about-img img {
-    width: 350px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-right: 70px;
-    
+  .about-img {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* align image to left */
+    margin: 0; /* remove extra margins */
   }
+
   
   .about-text {
-    max-width: 400px;
+    flex: 1;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 1.8;
     color: #f1f1f1;
-    text-align: left;
+    padding: 40px;
+    max-width: 600px;
+  
+    /* Background image */
+    background-image: url('images/back_aboutus.png'); /* <-- Replace with actual path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    /* Center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    border-radius: 20px; /* Optional for a smooth edge */
   }
+  
+
   
   .about-text .view-more-btn {
     margin-top: 30px;
@@ -396,7 +416,7 @@
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-size: contain;
     margin-top: 60px;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1));
   }
@@ -441,10 +461,22 @@
   }
   
   /* Animation movement */
-  .expanded .potato_vada { transform: translateY(-45px) rotate(-4deg); }
-  .expanded .mirchi { transform: translateY(-80px) scale(1.05) rotate(2deg); }
-  .expanded .chutney { transform: translateY(-120px) rotate(4deg); }
-  .expanded .bun-top { transform: translateY(-160px) rotate(-2deg); }
+  .expanded .bun-bottom {
+    transform: translateY(-40px) rotate(-5deg);
+  }
+  .expanded .potato_vada {
+    transform: translateY(-100px) rotate(-3deg);
+  }
+  
+  .expanded .chutney {
+    transform: translateY(-190px) rotate(5deg);
+  }
+  .expanded .mirchi {
+    transform: translateY(-240px) scale(1.1) rotate(2deg);
+  }
+  .expanded .bun-top {
+    transform: translateY(-320px) rotate(-2deg);
+  }
   
   
 
