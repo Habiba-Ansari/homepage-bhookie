@@ -22,7 +22,7 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="menu.html" >Menu</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
             <div class="nav-buttons">
                 <a href="#" class="login-btn">Login</a>
@@ -105,25 +105,23 @@
   <!-- About Us Detail Section -->
 <div class="about-detail">
   <div class="about-img">
-    <div class="vadapav-container" id="vadapavSection">
-        <div class="vadapav" id="vadapav">
-        <div class="ingredient bun-bottom"></div>
-        <div class="ingredient potato_vada"></div>
-        <div class="ingredient mirchi"></div>
-        <div class="ingredient chutney"></div>
-        <div class="ingredient bun-top"></div>
+    <div class="vadapav">
+      <div class="ingredient bun-bottom"></div>
+      <div class="ingredient potato_vada"></div>
+      <div class="ingredient mirchi"></div>
+      <div class="ingredient chutney"></div>
+      <div class="ingredient bun-top"></div>
     </div>
   </div>
   
-  
     <div class="about-text">
-      <p><strong>
+      <p>
         At Bhookie, we’re all about bold flavors, big cravings, and unforgettable bites.
         Born from a passion for street-style fusion food, Bhookie brings together the best
         of global comfort dishes with a desi twist. Whether it’s our loaded burgers,
         spicy wraps, crispy fries, or signature street bites — every item is crafted to
         deliver a punch of flavor and satisfaction in every bite.
-      </strong></p>
+      </p>
       <a href="#" class="view-more-btn">VIEW MORE</a>
     </div>
   </div>
@@ -171,36 +169,43 @@
   </div>
 </footer>
 <script>
- const heroLogo = document.querySelector('.hero-logo');
+  const heroLogo = document.getElementById("heroLogo");
+  const heroContainer = document.querySelector(".hero-logo");
+  const maxScroll = 300; // Max scroll distance for full animation
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 100) {
-    heroLogo.classList.add('shrink');
-  } else {
-    heroLogo.classList.remove('shrink');
-  }
-});
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const vadapav = document.querySelector('.vadapav');
-    const vadapavContainer = document.querySelector('.vadapav-container');
+    // Limit scroll-based transform to maxScroll
+    const scrollPercent = Math.min(scrollY / maxScroll, 1);
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // When the container is in the viewport, add the 'expanded' class
-                vadapav.classList.add('expanded');
-            } else {
-                // When the container is out of the viewport, remove the 'expanded' class
-                vadapav.classList.remove('expanded');
-            }
-        });
-    }, {
-        threshold: 0.3 // Adjust this threshold as needed (e.g., 0.5 for when the center is visible)
-    });
-        // Start observing the vadapav container
-        observer.observe(vadapavContainer);
-});
+    // Calculate position & scale
+    const scale = 1 - scrollPercent * 0.5; // Shrinks to 50%
+    const translateX = -window.innerWidth / 2 + 120;
+    const translateY = -scrollPercent * 60;
+
+    heroLogo.style.transform = scale(${scale}) translate(${translateX * scrollPercent}px, ${translateY}px);
+    heroLogo.style.opacity = ${1 - scrollPercent * 0.2};
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+      const vadapav = document.querySelector('.vadapav');
+      let lastScroll = window.scrollY;
+
+      window.addEventListener('scroll', () => {
+          const currentScroll = window.scrollY;
+          const scrollDirection = currentScroll > lastScroll ? 'down' : 'up';
+          lastScroll = currentScroll;
+
+          const container = document.querySelector('.vadapav');
+          const containerTop = container.getBoundingClientRect().top;
+          const triggerPoint = window.innerHeight * 0.8;
+
+          if (containerTop < triggerPoint) {
+              vadapav.classList[scrollDirection === 'down' ? 'add' : 'remove']('expanded');
+          }
+      });
+  });
 </script>
 </body>
 
