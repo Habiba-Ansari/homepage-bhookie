@@ -316,7 +316,7 @@
     text-align: center;
     margin-top: 80px;
     color: white;
-    padding-left: 350px; 
+    padding-left: 200px; 
     
   }
   
@@ -354,6 +354,7 @@
     display: flex;
     justify-content: flex-start; /* align image to left */
     margin: 0; /* remove extra margins */
+    margin-left: -200px;
   }
 
   
@@ -363,14 +364,17 @@
     font-size: 16px;
     line-height: 1.8;
     color: #f1f1f1;
-    padding: 40px;
-    max-width: 600px;
+    padding-left:115px; /* increase from 100px */
+    padding-right: 70px; 
+    max-width: 650px;
+    
   
     /* Background image */
     background-image: url('images/back_aboutus.png'); /* <-- Replace with actual path */
     background-size: cover;
-    background-position: center;
+    background-position: 500% ;
     background-repeat: no-repeat;
+    
   
     /* Center content */
     display: flex;
