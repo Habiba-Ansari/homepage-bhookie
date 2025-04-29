@@ -1,12 +1,16 @@
+// Multiple sites configuration:
 {
-    "hosting": {
-      "bhookiehome-345": {
-        "public": "public",
+    "hosting": [
+      {
+        "target": "bhookiehome-345", // Make sure this matches the site ID in the Firebase Console
+        "public": "public", // Or whatever your public directory is
         "ignore": [
           "firebase.json",
           "**/.*",
           "**/node_modules/**"
-        ]
+        ],
+        "rewrites": [ ... ] // Optional rewrites
       }
-    }
+    ]
   }
+  
