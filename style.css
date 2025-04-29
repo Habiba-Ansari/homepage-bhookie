@@ -103,6 +103,25 @@ body {
   font-weight: 600;
   padding: 6px 16px;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid red; /* debug border */
+  background-color: yellow; /* debug background */
+}
+
+.signup-btn img {
+  height: 20px;
+  width: 20px;
+  display: block;
+  border: 2px solid blue; /* debug border */
+  background-color: lightgreen; /* debug background */
+}
+
+.signup-btn img {
+  height: 20px;
+  width: 20px;
+  display: block;
 }
 
 /* HERO CONTENT */
