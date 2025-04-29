@@ -42,49 +42,71 @@
     <p class="menu-description">Order now and enjoy the magic...</p>
 
     <!-- New Bites Card Section -->
-    <div class="menu-cards">
-      <div class="menu-card">
-        <img src="images/1.png" alt="Plain Chicken Bites" />
-        <h3><span class="highlight">Plain</span><br>Chicken Bites</h3>
-        <div class="price-cart">
-          <span>$100</span>
-          <i class="fa-solid fa-cart-shopping"></i>
+    <div class="menu-cards-wrapper" style="overflow-x: auto; white-space: nowrap; padding-bottom: 20px;">
+      <div class="menu-cards" style="display: inline-flex; flex-wrap: nowrap; gap: 40px; padding: 80px; padding-bottom: 100px;">
+        <div class="menu-card" style="display: inline-block;">
+          <img src="images/1.png" alt="Plain Chicken Bites" />
+          <h3><span class="highlight">Plain</span><br>Chicken Bites</h3>
+          <div class="price-cart">
+            <span>$100</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
         </div>
-      </div>
-
-      <div class="menu-card">
-        <img src="images/2.png" alt="Peri Peri Chicken Bites" />
-        <h3><span class="highlight">Peri Peri</span><br>Chicken Bites</h3>
-        <div class="price-cart">
-          <span>$100</span>
-          <i class="fa-solid fa-cart-shopping"></i>
+        <div class="menu-card" style="display: inline-block;">
+          <img src="images/2.png" alt="Peri Peri Chicken Bites" />
+          <h3><span class="highlight">Peri Peri</span><br>Chicken Bites</h3>
+          <div class="price-cart">
+            <span>$100</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
         </div>
-      </div>
-
-      <div class="menu-card">
-        <img src="images/3.png" alt="BBQ Chicken Bites" />
-        <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
-        <div class="price-cart">
-          <span>$100</span>
-          <i class="fa-solid fa-cart-shopping"></i>
+        <div class="menu-card" style="display: inline-block;">
+          <img src="images/3.png" alt="BBQ Chicken Bites" />
+          <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
+          <div class="price-cart">
+            <span>$100</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
         </div>
-      </div>
-
-      <div class="menu-card">
-        <img src="images/4.png" alt="BBQ Chicken Bites" />
-        <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
-        <div class="price-cart">
-          <span>$100</span>
-          <i class="fa-solid fa-cart-shopping"></i>
+        <div class="menu-card" style="display: inline-block;">
+          <img src="images/4.png" alt="BBQ Chicken Bites" />
+          <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
+          <div class="price-cart">
+            <span>$100</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
         </div>
-      </div>
-
-      <div class="menu-card">
-        <img src="images/5.png" alt="Signature Chicken Bites" />
-        <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
-        <div class="price-cart">
-          <span>$100</span>
-          <i class="fa-solid fa-cart-shopping"></i>
+        <div class="menu-card" style="display: inline-block;">
+          <img src="images/5.png" alt="Signature Chicken Bites" />
+          <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
+          <div class="price-cart">
+            <span>$100</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="menu-card" style="display: inline-block;">
+          <img src="images/5.png" alt="Signature Chicken Bites" />
+          <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
+          <div class="price-cart">
+            <span>$100</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="menu-card" style="display: inline-block;">
+          <img src="images/5.png" alt="Signature Chicken Bites" />
+          <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
+          <div class="price-cart">
+            <span>$100</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+        </div>
+        <div class="menu-card" style="display: inline-block;">
+          <img src="images/5.png" alt="Signature Chicken Bites" />
+          <h3><span class="highlight">BBQ</span><br>Chicken Bites</h3>
+          <div class="price-cart">
+            <span>$100</span>
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -129,6 +151,84 @@
       </div>
     </div>
   </footer>
-  
+
+  <script>
+    const menuData = {
+      "STREET BITES": [
+        "Plain Chicken Bites",
+        "Peri Peri Chicken Bites",
+        "BBQ Chicken Bites",
+        "BBQ Chicken Bites",
+        "Signature Chicken Bites",
+        "Signature Chicken Bites",
+        "Signature Chicken Bites",
+        "Signature Chicken Bites"
+      ],
+      "FRIES": [
+        "Classic Fries",
+        "Cheese Fries",
+        "Peri Peri Fries",
+        "Garlic Fries",
+        "Loaded Fries",
+        "Spicy Fries",
+        "Curly Fries",
+        "Sweet Potato Fries"
+      ],
+      "BITES": [
+        "Plain Chicken Bites",
+        "Peri Peri Chicken Bites",
+        "BBQ Chicken Bites",
+        "BBQ Chicken Bites",
+        "Signature Chicken Bites",
+        "Signature Chicken Bites",
+        "Signature Chicken Bites",
+        "Signature Chicken Bites"
+      ],
+      "WRAPS": [
+        "Chicken Wrap",
+        "Veggie Wrap",
+        "Paneer Wrap",
+        "Spicy Wrap",
+        "BBQ Wrap",
+        "Classic Wrap",
+        "Tandoori Wrap",
+        "Falafel Wrap"
+      ],
+      "BURGERS": [
+        "Classic Burger",
+        "Cheese Burger",
+        "Veggie Burger",
+        "BBQ Burger",
+        "Spicy Burger",
+        "Chicken Burger",
+        "Mushroom Burger",
+        "Signature Burger"
+      ]
+    };
+
+    function updateMenuCards(category) {
+      const cards = document.querySelectorAll('.menu-card h3');
+      const items = menuData[category];
+      cards.forEach((card, index) => {
+        if (items && items[index]) {
+          const parts = items[index].split(' ');
+          const highlight = parts[0];
+          const rest = parts.slice(1).join(' ');
+          card.innerHTML = `<span class="highlight">${highlight}</span><br>${rest}`;
+        }
+      });
+    }
+
+    document.querySelectorAll('.menu-categories span').forEach(span => {
+      span.addEventListener('click', () => {
+        document.querySelectorAll('.menu-categories span').forEach(s => s.classList.remove('active'));
+        span.classList.add('active');
+        updateMenuCards(span.textContent);
+      });
+    });
+
+    // Initialize with active category
+    updateMenuCards(document.querySelector('.menu-categories span.active').textContent);
+  </script>
 </body>
 </html>

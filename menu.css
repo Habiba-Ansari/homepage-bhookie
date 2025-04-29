@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+   padding: 0;
   box-sizing: border-box;
 }
 
@@ -275,4 +275,25 @@ body {
 
 .social-icons i:hover {
   color: #ff6b00;
+}
+
+/* Scrollbar styles for menu-cards-wrapper */
+.menu-cards-wrapper {
+  scrollbar-width: thin;
+  scrollbar-color: #ff6b00 #191917;
+}
+
+.menu-cards-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.menu-cards-wrapper::-webkit-scrollbar-track {
+  background: #191917;
+  border-radius: 4px;
+}
+
+.menu-cards-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ff6b00;
+  border-radius: 4px;
+  border: 2px solid #191917;
 }
